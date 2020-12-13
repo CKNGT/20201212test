@@ -1,0 +1,81 @@
+git仓库分为本地仓库和远程仓库
+参考文档：https://blog.csdn.net/pansaky/article/details/85251692
+
+本地仓库：
+工作区：就是你在电脑上看到的目录，比如目录下testgit里的文件(.git隐藏目录版本库除外)。或者以后需要再新建的目录文件等等都属于工作区范畴。
+
+版本库(Repository)：工作区有一个隐藏目录.git,这个不属于工作区，这是版本库。其中版本库里面存了很多东西，其中最重要的就是stage(暂存区)，还有Git为我们自动创建了第一个分支master,以及指向master的一个指针HEAD。
+
+我们前面说过使用Git提交文件到版本库有两步：
+
+第一步：是使用 git add 把文件添加进去，实际上就是把文件添加到暂存区。
+
+第二步：使用git commit提交更改，实际上就是把暂存区的所有内容提交到当前分支上。
+
+
+远程仓库：
+参考文档：https://blog.csdn.net/qq_36667170/article/details/79094257
+ssh-keygen -t rsa -C "*****@16.com" 如果提示更多参数，检查大小写空格
+多个电脑可以用同一个.ssh文件 
+
+
+初始化文件夹变成本地仓库
+git init
+
+本地仓库添加文件
+git add 文件名
+
+本地仓库提交文件
+git commit -m "文件描述"
+
+是否有文件未提交本地仓库
+git status
+
+查看修改内容
+git diff 文件名
+
+查看版本修改记录
+git log 
+
+查看已经存在的远程仓库 -v显示地址 
+remote是远程的意思
+git remote -v
+
+更新本地仓库
+git pull
+
+删除指定文件
+
+相对本地
+1.git rm 文件命名
+2.git commit -m "文件描述"
+相对远程
+3.git push origin 分支名
+
+添加ssh/https远程仓库 origin(相当于添加了仓库别名)
+git remote add origin 仓库链接
+
+推送远程仓库
+git push origin 分支名
+
+显示所有(本地)分支  -r(远程) -a(所有) 
+git branch
+
+添加新分支(本地)
+git branch 新分支名
+
+本地分支更新远程仓库
+git push origin fz
+
+切换分支、创建分支
+git checkout 分支名
+
+合并到主分支
+git merge 分支名
+
+切换远程仓库https -> ssh链接方式 origin(远程仓库默认名字)
+1.git remote rm origin
+2.git remote add origin 仓库地址
+
+
+
