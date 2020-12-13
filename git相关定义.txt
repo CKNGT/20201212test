@@ -52,17 +52,20 @@ git pull
 相对远程
 3.git push origin 分支名
 
-添加ssh/https远程仓库
+添加ssh/https远程仓库 origin(相当于添加了仓库别名)
 git remote add origin 仓库链接
 
 推送远程仓库
 git push origin 分支名
 
-显示所有分支
+显示所有(本地)分支  -r(远程) -a(所有) 
 git branch
 
-添加新分支
+添加新分支(本地)
 git branch 新分支名
+
+本地分支更新远程仓库
+git push origin fz
 
 切换分支、创建分支
 git checkout 分支名
@@ -73,3 +76,6 @@ git merge 分支名
 切换远程仓库https -> ssh链接方式 origin(远程仓库默认名字)
 1.git remote rm origin
 2.git remote add origin 仓库地址
+
+
+
