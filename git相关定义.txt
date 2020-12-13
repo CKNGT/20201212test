@@ -69,3 +69,7 @@ git checkout 分支名
 
 合并到主分支
 git merge 分支名
+
+切换远程仓库https -> ssh链接方式 origin(远程仓库默认名字)
+1.git remote rm origin
+2.git remote add origin 仓库地址
