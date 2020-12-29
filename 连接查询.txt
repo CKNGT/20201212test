@@ -1,0 +1,10 @@
+内连接
+1.等值连接
+2.非等值连接
+
+外连接
+1.内外 inner join
+2.左外 left join
+3.右外 right join
+4.全外 full join （MySQL不能用）相当于union all左外+右外
+5.交叉连接 CROSS join 条件只能用on 不加条件相当于笛卡尔积
